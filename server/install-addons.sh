@@ -43,7 +43,7 @@ for skill in avtomontazh "${PRODUCER_SKILLS[@]}"; do
   [ ! -e "$claude_skills/$skill" ] || fail "Skill уже существует: $claude_skills/$skill"
 done
 
-run mkdir -p "$packages" "$claude_skills" "$agent_skills"
+run mkdir -p "$montage" "$claude_skills" "$agent_skills"
 run git clone --depth 1 "$MONTAGE_REPOSITORY" "$montage/engine"
 run git clone --depth 1 "$PRODUCER_REPOSITORY" "$producer"
 run npm ci --prefix "$montage/engine"

@@ -46,5 +46,9 @@ if [[ "$dry_run_output" != *"Будут подключены skills"* ]]; then
   echo "Installer dry run did not describe the skills" >&2
   exit 1
 fi
+if [[ "$dry_run_output" != *"$test_agent/packages/avtomontazh"* ]]; then
+  echo "Installer dry run does not create the montage parent directory" >&2
+  exit 1
+fi
 
 echo "Module bundle checks passed"
