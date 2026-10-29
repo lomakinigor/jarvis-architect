@@ -21,6 +21,7 @@ require_dir() {
 }
 
 require_file "$jarvis/server/install-addons.sh"
+require_file "$jarvis/server/update-addons.sh"
 require_file "$montage/.claude/skills/avtomontazh/SKILL.md"
 
 for skill in producer-orchestrator trend-hunter video-transcriber scenario-writer presentation-maker lead-magnet-maker; do
